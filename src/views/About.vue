@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-     about
+      <el-button type="primary">about</el-button>
   </div>
 </template>
 <script lang="ts">
