@@ -67,7 +67,7 @@ export default class Header extends Vue {
   private optionFlag = false;
   private options = ['修改密码', '绑定手机', '解绑手机'];
   private showTabCompany = true;
-  private async loginou(): Promise<void> {
+  private async loginout(): Promise<void> {
     await this.$confirm('确定要退出么?', '提示', {
       confirmButtonText: '确定',
       cancelButtonText: '取消',
