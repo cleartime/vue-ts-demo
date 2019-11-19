@@ -80,9 +80,9 @@
 import { Vue } from 'vue-property-decorator';
 import Component from 'vue-class-component';
 import Header from '../components/header/header.vue';
-import _getSubmenuData from  '../utils/getSubmenuData';
+import _getSubmenuData from '../utils/getSubmenuData';
 import { menulist } from '../lib/menu';
-import { Menu } from "@/types/menu";
+import { Menu } from '@/types/menu';
 
 @Component({
   components: {
@@ -94,11 +94,11 @@ export default class Home extends Vue {
   private menuLoaded = false;
   private activeIndex = location.hash.slice(1);
   private subMenu: any[] = [];
-  created(): void {
+  private created(): void {
     this.menuLoaded = true;
     this.subMenu = _getSubmenuData(null, this.menu, true , true);
     this.subMenu = _getSubmenuData(null, this.menu, true, null);
-  };
+  }
 }
 </script>
 <style lang="scss">

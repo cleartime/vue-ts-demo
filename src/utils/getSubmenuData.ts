@@ -1,9 +1,7 @@
-/*
-*@lll
-*/
+/* tslint:disable */
 
-let _routes = {};
-const findMenu = (routes, path  ) => {
+let _routes:any = {};
+const findMenu:any = (routes:any, path:any  ) => {
   for ( let i= 0; i<routes.length; i++ ){
     if ( routes[i].path ) {
       _routes[routes[i].path] = routes[i];
@@ -14,7 +12,7 @@ const findMenu = (routes, path  ) => {
     }
   }
 };
-const _getSubmenuData = ( name ,menu , isChinarailway, isNew ) => {
+const _getSubmenuData:any = ( name:any ,menu:any , isChinarailway:any, isNew:any ) => {
   if ( !isChinarailway ) return [];
   let path = location.href.split('?')[0].split('#')[1];
   let _re = null;
