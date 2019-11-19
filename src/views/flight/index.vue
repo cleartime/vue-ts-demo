@@ -95,8 +95,8 @@ import Component from 'vue-class-component';
 
 @Component({})
 export default class Flight extends Vue {
-  private uid = '';
-  private reportConfig = {
+  private uid: string = '';
+  private reportConfig: object = {
     bookId: '订单号',
     username: '预订人姓名',
     company: '公司',
@@ -155,33 +155,33 @@ export default class Flight extends Vue {
     insuranceStatus: '保单状态',
     insuranceType: '保险类型',
   };
-  private templates = [];
-  private companyOptions = [];
+  private templates: number[] = [];
+  private companyOptions: string[] = [];
 
-  private companyId = '';
-  private bookDate = '';
-  private issueDate = '';
-  private takeoffDate = '';
+  private companyId: string = '';
+  private bookDate: string = '';
+  private issueDate: string = '';
+  private takeoffDate: string = '';
 
-  private pickedTemplateIndexUI = -1;
-  private pickedTemplateIndex = -1;
-  private checkAll = false;
-  private checkedConfigs = [];
-  private normalConfigsTemp = [];
-  private isIndeterminate = true;
+  private pickedTemplateIndexUI: number = -1;
+  private pickedTemplateIndex: number = -1;
+  private checkAll: boolean = false;
+  private checkedConfigs: number[] = [];
+  private normalConfigsTemp: number[] = [];
+  private isIndeterminate: boolean = true;
 
-  private configDialogVisible = false;
-  private isEdit = false;
-  private dialogCheckAll = false;
-  private dialogIsIndeterminate = true;
-  private dialogCheckedConfigs = [];
-  private dialogTemplateName = '';
+  private configDialogVisible: boolean = false;
+  private isEdit: boolean = false;
+  private dialogCheckAll: boolean = false;
+  private dialogIsIndeterminate: boolean = true;
+  private dialogCheckedConfigs: number[] = [];
+  private dialogTemplateName: string = '';
 
-  private tipDialogVisible = false;
-  private isDeleteTypeTipDialog = false;
+  private tipDialogVisible: boolean = false;
+  private isDeleteTypeTipDialog: boolean = false;
 
-  private confirmLock = false;
-  private bgUser = true;
+  private confirmLock: boolean = false;
+  private bgUser: boolean = true;
 }
 </script>
 

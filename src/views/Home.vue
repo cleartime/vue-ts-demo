@@ -91,8 +91,8 @@ import { Menu } from '@/types/menu';
 })
 export default class Home extends Vue {
   private menu: Menu[] = menulist;
-  private menuLoaded = false;
-  private activeIndex = location.hash.slice(1);
+  private menuLoaded: boolean = false;
+  private activeIndex: string = location.hash.slice(1);
   private subMenu: any[] = [];
   private created(): void {
     this.menuLoaded = true;
