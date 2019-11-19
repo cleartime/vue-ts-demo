@@ -15,10 +15,10 @@
           <span class="gl-r-cbutton"  v-if="showTabCompany">切换公司</span>
         </div>
         <div class="gl-r-2">
-          <div class="logout">
-            <i class="el-icon-switch-button"></i>
+          <div class="logout" >
+            <i class="el-icon-switch-button" @click="loginout"></i>
           </div>
-          <div class="user">
+          <div class="user"  >
             <i class="el-icon-user usericon"></i>
             欢迎您，{{user.userName||''}}
             <i
@@ -67,6 +67,13 @@ export default class Header extends Vue {
   private optionFlag = false;
   private options = ['修改密码', '绑定手机', '解绑手机'];
   private showTabCompany = true;
+  private async loginou(): Promise<void> {
+    await this.$confirm('确定要退出么?', '提示', {
+      confirmButtonText: '确定',
+      cancelButtonText: '取消',
+      type: 'warning'
+    })
+  }
 }
 </script>
 <style lang="scss">
